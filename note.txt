@@ -1,0 +1,4 @@
+okay so the feature we are working on is - 
+1.migrate
+2.output structuring 
+3. Input structuring and pruning 
