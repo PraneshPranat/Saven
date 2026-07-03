@@ -1,4 +1,6 @@
-okay so the feature we are working on is - 
-1.migrate
-2.output structuring 
-3. Input structuring and pruning 
+Your Final V1 Feature List:
+Migrate: Prompt-driven summary + Clipboard handoff.
+Output Structuring: "Anti-Yap" constraint injection.
+Input Structuring/Pruning: Log stripper + Invisible character cleaner.
+Savings Dashboard: Track tokens saved in local storage.
+Prompt Macros: 1-click insertion of saved constraints.
