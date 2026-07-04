@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Saven",
+  "version": "1.0.0",
+  "description": "Stop AI yapping, prune logs, and save tokens.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": [
+    "*://chat.openai.com/*",
+    "*://chatgpt.com/*",
+    "*://claude.ai/*",
+    "*://gemini.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chat.openai.com/*",
+        "*://chatgpt.com/*",
+        "*://claude.ai/*",
+        "*://gemini.google.com/*"
+      ],
+      "js": ["src/content/index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Saven"
+  }
+}
