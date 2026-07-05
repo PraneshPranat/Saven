@@ -3,7 +3,12 @@
   "name": "Saven",
   "version": "1.0.0",
   "description": "Stop AI yapping, prune logs, and save tokens.",
-  "permissions": ["storage", "scripting", "activeTab"],
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "chrome://favicon/"
+  ],
   "host_permissions": [
     "*://chat.openai.com/*",
     "*://chatgpt.com/*",
