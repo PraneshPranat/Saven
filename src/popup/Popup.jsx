@@ -1,11 +1,10 @@
-// src/popup/Popup.jsx
 import { useState, useEffect } from "react";
 
 export default function Popup() {
   const [currentHost, setCurrentHost] = useState("");
 
   useEffect(() => {
-    // Read the URL of the tab the user was on when they clicked the icon
+    
     chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
       if (tab?.url) {
         setCurrentHost(new URL(tab.url).hostname);

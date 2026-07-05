@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { crx } from "@crxjs/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import manifest from "./manifest.json" assert { type: "json" };
-import react from "@vitejs/plugin-react";
+
 
 import react from '@vitejs/plugin-react'
 
