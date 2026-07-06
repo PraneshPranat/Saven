@@ -9,6 +9,9 @@
     "activeTab",
     "chrome://favicon/"
   ],
+  "background": {
+  "service_worker": "src/background/index.js"
+},
   "host_permissions": [
     "*://chat.openai.com/*",
     "*://chatgpt.com/*",
@@ -30,5 +33,11 @@
   "action": {
     "default_popup": "src/popup/index.html",
     "default_title": "Saven"
-  }
+  },
+    "web_accessible_resources": [
+    {
+      "resources": ["src/content/index.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
