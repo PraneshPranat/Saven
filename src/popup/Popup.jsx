@@ -12,7 +12,7 @@ const Popup = () => {
   }, [isActive]);
 
   const toggle = () => {
-    setActive(!isActive)
+    setActive(!isActive);
   };
   return (
     <div>
