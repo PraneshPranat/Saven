@@ -4,3 +4,15 @@ Output Structuring: "Anti-Yap" constraint injection.
 Input Structuring/Pruning: Log stripper + Invisible character cleaner.
 Savings Dashboard: Track tokens saved in local storage.
 Prompt Macros: 1-click insertion of saved constraints.
+
+
+
+//service worker  
+Because of security and isolation, a Chrome Extension is split into three separate worlds that need the service worker to talk to each other:
+The 3 Isolated EnvironmentsThe Popup (Frontend UI): This is just an HTML/CSS/JS page. It only lives while the user clicks the icon and keeps the little window open. The moment they click away, the popup completely dies.
+The Service Worker (Background Logic): This is your persistent (but ephemeral) control center. It runs in the background, handles data, listens to browser events, and coordinates everything.
+The Content Script (Web Page Injector): This is a script that actually runs inside the web page (like google.com). It is the only script that can see and modify the page's HTML/DOM.
+
+How they work together (The Communication Link)
+
+Since the Popup cannot directly touch the web page, it uses the Service Worker as a bridge, or messages the Content Script directly through the browser's router.

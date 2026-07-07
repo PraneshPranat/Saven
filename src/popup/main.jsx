@@ -5,7 +5,7 @@ import Popup from "./Popup.jsx";
 import "../index.css"; // Brings in your Tailwind setup
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Popup />
-  </React.StrictMode>,
+  {/* </React.StrictMode>, */}
 );
