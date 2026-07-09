@@ -6,7 +6,7 @@ Saven is a lightweight, intelligent Chrome Extension designed for developers, AI
 
 ---
 
-## 🚨 The Problem
+## 🚨 The Problems
 Modern AI development is plagued by hidden inefficiencies:
 1. **The "Dump Truck" Effect:** Pasting 5,000 lines of server logs just to ask about one error wastes massive amounts of input tokens.
 2. **The Output Premium:** LLMs waste expensive output tokens on conversational filler (*"Certainly! Here is the updated code..."*).
