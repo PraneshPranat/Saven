@@ -54,6 +54,6 @@ Saven is built with a modern, high-performance architecture:
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/PraneshPranat/Saven
+git clone https://github.com/PraneshPranat/Saven.git
 cd saven
 npm install
