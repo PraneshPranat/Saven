@@ -5,16 +5,22 @@ const Popup = () => {
   const [isActive, setActive] = useState(false);
 
   useEffect(() => {
-    //this will fetch the current tab hostname for the first time when the popup is opened and set the isActive state accordingly
-
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      if (tabs[0] && tabs[0].url) {
-        // Parse the URL string into an object
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs[0]?.url) {
         const urlObj = new URL(tabs[0].url);
-
-        // Extract the hostname (e.g., "example.com")
         const hn = urlObj.hostname;
+
         setHostname(hn);
+
+        const autoSites = [
+          "chat.openai.com",
+          "chatgpt.com",
+          "claude.ai",
+          "gemini.google.com",
+        ];
+        if (autoSites.includes(hn)) {
+          setActive(true); // ✅ Runs with the real hostname
+        }
       }
     });
   }, []);
