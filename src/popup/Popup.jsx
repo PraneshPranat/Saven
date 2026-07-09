@@ -28,16 +28,20 @@ const Popup = () => {
   };
   return (
     <div>
-      <div className="flex gap-5">
+      <div className="flex  gap-5">
         <span>
-          <img src="" alt="#" />
+          <img
+            className="w-10 h-10 rounded-full object-cover shadow-sm"
+            src="/saven.svg"
+            alt="#"
+          />
         </span>
-        <p className="text-xl text-cyan-700 ">Saven</p>
+        <p className="text-2xl mt-1 font-bold text-cyan-700 ">Saven</p>
       </div>
 
       <div className="flex justify-center mt-10 mb-4">
         <p className="text-xl text-cyan-500">
-          {isActive ? "Optimise AI tokens" : "AI tokens optimiser is ON"}
+          {!isActive ? "Optimise AI tokens" : "AI tokens optimiser is ON"}
         </p>
       </div>
       <div className=" mx-auto h-20 bg-cyan-900 rounded-lg flex flex-col justify-center items-center">
@@ -49,11 +53,11 @@ const Popup = () => {
         </button>
       </div>
       <div className="mt-8">
-        <p className="text-xl text-cyan-500">
+        <p className="text-xl  text-cyan-500">
           {isActive ? (
             <>
-              {" "}
-              working on <span className="text-emerald-500"> {hostname} </span>
+              <span className="text-[16px]">working on : </span>
+              <span className=" px-3 text-emerald-500"> {hostname} </span>
             </>
           ) : (
             ""
