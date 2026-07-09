@@ -16,3 +16,9 @@ The Content Script (Web Page Injector): This is a script that actually runs insi
 How they work together (The Communication Link)
 
 Since the Popup cannot directly touch the web page, it uses the Service Worker as a bridge, or messages the Content Script directly through the browser's router.
+
+
+
+In React, you cannot just place a raw string ("working on") right next to a JSX element (<p>) inside parentheses like that. JavaScript doesn't know how to glue them together. If you want to return multiple items side-by-side in JSX, they must be wrapped in a single parent element or a React Fragment (<> </>).
+
+2. The HTML Rule Violation (<p> inside <p>)
